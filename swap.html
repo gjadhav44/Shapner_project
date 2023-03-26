@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Swap two numbers using JS(JavaScript)</title>
+  </head>
+  <body>
+    <h1>Swap two numbers using JS(JavaScript)</h1>
+    <p>Value of a: <input type="text" id="before_swap_first_value" /></p>
+    <br />
+    <p>Value of b: <input type="text" id="before_swap_second_value" /></p>
+    <br />
+    <button type="button" onclick="swap()">Swap</button>
+    <!--onclick - The event occurs when the user clicks on an element -->
+    <p>Value of a: <input type="text" id="after_swap_first_value" /></p>
+    <p>Value of b: <input type="text" id="after_swap_second_value" /></p>
+    <script>
+      function swap() {
+        var a, b, c;
+        a = Number(document.getElementById("before_swap_first_value").value);
+        b = Number(document.getElementById("before_swap_second_value").value);
+        //.value - The value property returns the value of the attribute.
+        c = a; // a = 2 , b = 3  || c = 2
+        a = b; // a = 3
+        b = c; // b = 2
+        document.getElementById("after_swap_first_value").value = a;
+        document.getElementById("after_swap_second_value").value = b;
+      }
+    </script>
+  </body>
+</html>
